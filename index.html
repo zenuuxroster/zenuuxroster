@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta name="author" content="@fwmalpa">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <title>Roster 2.0</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+    <div id="click-me-container">
+        <p id="click-me-text">click me</p>
+        <audio id="audio" src="song.mp3"></audio>
+    </div>
+    <h5>Made by @fwmalpa</h5>
+    <p>Zenuux's Roster</p>
+    <section class="hidden">
+        <h1>Jasi (main)</h1>
+        <h4>Recently blimped by Zenuux for known reasons 😉<h4>
+        <div class="image-container">
+        <a href="https://www.roblox.com/users/5399196121/profile" target="_blank">
+            <img id="avatar4" src="jasi.webp" alt="jasi">
+            <div class="image-text">@jasiixox</div>
+        </a>
+        </div>
+    </section>
+    
+    <section class="hidden">
+        <h1>Justice</h1>
+        <div class="image-container">
+            <a href="https://www.roblox.com/users/56024881/profile" target="_blank">
+                <img id="avatar8" src="justice.webp" alt="justice">
+                <div class="image-text">@jyustice</div>
+            </a>
+        </div> 
+    </section>
+
+    <section class="hidden">
+        <h1>Lauryn</h1>
+        <div class="image-container">
+            <a href="https://www.roblox.com/users/2249753260/profile" target="_blank">
+                <img id="avatar7" src="lauryn.webp" alt="lauryn">
+                <div class="image-text">@lauryynnnnn</div>
+            </a>
+        </div> 
+    </section>
+
+    <section class="hidden">
+        <h1>Meg</h1>
+        <h4>Their relationship lasted less than a week. 🏆</h4>
+        <div class="image-container">
+            <a href="https://www.roblox.com/users/117606282/profile" target="_blank">
+                <img id="avatar6" src="meg.webp" alt="6">
+                <div class="image-text">@luhvvmegs</div>
+            </a>
+        </div>
+    </section>
+
+    <section class="hidden">
+        <h1>Nat</h1>
+        <h4>Thirsty ass jit. First Zenuux, then Tizz.</h4>
+        <div class="image-container">
+            <a href="https://www.roblox.com/users/2324076241/profile" target="_blank">
+                <img id="avatar3" src="nat.webp" alt="nat">
+                <div class="image-text">@auhvial</div>
+            </a>
+        </div> 
+    </section>
+
+    <section class="hidden">
+        <h1>Princesa (termed)</h1>
+        <h4>Can't blame him for this one. She was lowkey hot 😭✌</h4>
+        <div class="image-container">
+            <a href="https://www.roblox.com/users/4656974588/profile" target="_blank">
+                <img id="avatar5" src="img/princesa.png" alt="5">
+                <div class="image-text">@ZenuuxOnTop</div>
+            </a>
+        </div> 
+    </section>
+
+    <section class="hidden">
+        <h1>Syl (15-year-old)</h1>
+        <h4>"Yeah i'm 18"</h4>
+        <div class="image-container">
+            <a href="https://www.roblox.com/users/1942903759/profile" target="_blank">
+                <img id="avatar2" src="syl.webp" alt="2">
+                <div class="image-text">@ssylvya</div>
+            </a>
+        </div>
+    </section>
+
+    <section class="hidden">
+        <h1>vivi</h1>
+        <h4>She a bloody English twat innit?</h4>
+        <div class="image-container">
+            <a href="https://www.roblox.com/users/1745742195/profile" target="_blank">
+                <img id="avatar1" src="zlaitor.webp" alt="1">
+                <div class="image-text">@zlaitor</div>
+            </a>
+        </div>
+    </section>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        console.log(entry)
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        } else {
+            entry.target.classList.remove('show');
+        }
+    });
+});
+
+
+const hiddenElements = document.querySelectorAll('.hidden');
+hiddenElements.forEach((el) => observer.observe(el));
+
+
+    </script>
+<script>
+        document.getElementById('click-me-container').addEventListener('click', function() {
+               var audio = document.getElementById('audio');
+               audio.volume = 0.5;
+               audio.play();
+               this.style.display = 'none';
+               document.getElementById('gallery-header').style.display = 'block';
+               document.getElementById('gallery-main').style.display = 'block';
+           });
+   </script>
+</body>
+</html>
